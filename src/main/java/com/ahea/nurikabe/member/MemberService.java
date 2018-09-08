@@ -30,10 +30,11 @@ public class MemberService {
 		
 	}
 
-	public void login(Member member) {
+	public Member login(Member member) {
 		Member loginUser = this.findByUserIdAndUserPassword(member);
 		
 		if(loginUser == null) { throw new ValidationException("아이디 또는 비밀번호를 확인하세요."); }
+		return loginUser;
 	}
 	
 	public Member findByUserIdAndUserPassword(Member member) {
