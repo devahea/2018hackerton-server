@@ -1,5 +1,6 @@
 package com.ahea.nurikabe.mark;
 
+import antlr.StringUtils;
 import com.ahea.nurikabe.calculator.CalculatorService;
 import com.ahea.nurikabe.puzzle.Puzzle;
 import com.ahea.nurikabe.puzzle.PuzzleRepository;
@@ -43,8 +44,25 @@ public class MarkService {
     }
 
     private boolean isRight(String originalSource, String answerSource) {
-        return this.calculatorService.getRightAnswer(originalSource).equals(answerSource);
+
+        int[][] arrays = MarkUtils.Convert2Array(answerSource);
+
+        return isEmptyCheck(arrays) && poolOverCheck(arrays) && isOnePoolCheck(arrays);
+
     }
+
+    private boolean isEmptyCheck(int[][] source) {
+        return true;
+    }
+
+    private boolean poolOverCheck(int[][] source) {
+        return true;
+    }
+
+    private boolean isOnePoolCheck(int[][] source) {
+        return true;
+    }
+
 
     private int getConsumptionTime(long startTime) {
         long endTime = System.currentTimeMillis();
