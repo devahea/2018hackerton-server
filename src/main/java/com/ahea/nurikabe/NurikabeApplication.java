@@ -8,5 +8,6 @@ public class NurikabeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NurikabeApplication.class, args);
+		 
 	}
 }
