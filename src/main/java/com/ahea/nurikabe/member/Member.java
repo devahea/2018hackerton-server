@@ -2,10 +2,12 @@ package com.ahea.nurikabe.member;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table
 @Data
 public class Member {
