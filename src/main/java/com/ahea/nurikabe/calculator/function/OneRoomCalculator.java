@@ -1,6 +1,6 @@
 package com.ahea.nurikabe.calculator.function;
 
-public class ExampleCalculator implements Runnable{
+public class OneRoomCalculator implements Runnable {
     @Override
     public void run() {
 
