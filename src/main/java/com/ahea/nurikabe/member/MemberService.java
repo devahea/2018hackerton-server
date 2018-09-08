@@ -31,13 +31,9 @@ public class MemberService {
 	}
 
 	public void login(Member member) {
-		Member loginUser = this.findMember(member);
-		 
-		if(loginUser == null) { throw new ValidationException("해당 회원을 찾을 수 없습니다."); }
+		Member loginUser = this.findByUserIdAndUserPassword(member);
 		
-		Member acceptMember = this.findByUserIdAndUserPassword(member);
-		
-		if(acceptMember == null) { throw new ValidationException("아이디 또는 비밀번호를 확인하세요."); }
+		if(loginUser == null) { throw new ValidationException("아이디 또는 비밀번호를 확인하세요."); }
 	}
 	
 	public Member findByUserIdAndUserPassword(Member member) {
